@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { UsuarioService } from '../service.index';
+// para evitar una dependencia circular, esto no apunta a index, chequear como esta en el codigo despues
+import { UsuarioService } from '../usuario/usuario.service';
 
 @Injectable()
 export class LoginGuardGuard implements CanActivate {
