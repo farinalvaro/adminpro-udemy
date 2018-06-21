@@ -15,7 +15,8 @@ export class ImagenPipe implements PipeTransform {
       return url + '/usuarios/xxx';
     }
 
-    if (img.indexOf('https') >= 0) { //cuando viene con https es una imagen de google
+    if (img.indexOf('https') >= 0) { 
+      // cuando viene con https es una imagen de google
       return img;
     }
 
@@ -27,7 +28,7 @@ export class ImagenPipe implements PipeTransform {
         url += '/medicos/' + img;
       break;
       case 'hospital':
-        url += '/hospital/' + img;
+        url += '/hospitales/' + img;
       break;
       default:
         console.log('tipo de imagen no existe, usuario, medicos, hospitales');
